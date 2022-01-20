@@ -1,7 +1,7 @@
 // import { getByTitle } from '@testing-library/react'
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewsItem extends Component {
+const NewsItem =(props)=> {
     // constructor(){
     //     super();
     //     console.log("in constructor")
@@ -9,8 +9,8 @@ export class NewsItem extends Component {
     // }
 
 
-    render() {
-        let {title, description, imageUrl, newsUrl, author, date, source} = this.props;
+    
+        let {title, description, imageUrl, newsUrl, author, date, source} = props;
         return (
             <div className='my-3'>
                 <div className="card">
@@ -31,7 +31,7 @@ export class NewsItem extends Component {
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default NewsItem
